@@ -44,8 +44,7 @@ class Animal_Iterator(Base_Iterator[Animal]):
         return result
 
     def hasNext(self) -> bool:
-        if self.current_index_list < len(self.list_animal): return True
-        return False
+        return self.current_index_list < len(self.list_animal)
 
     def reset(self):
         self.current_index_list = 0
